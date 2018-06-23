@@ -2,8 +2,8 @@
   <div id="app">
 
 
-    <myInput  v-model="test" @changeToP="changeToP"></myInput>
-    <Loading></Loading>
+    <myInput   @changeToP="changeToP"></myInput>
+    <!--<Loading></Loading>-->
 
 
     <div @click="btnAction">错误</div>
@@ -18,23 +18,18 @@ export default {
       msg: 'Welcome to Your Vue.js App',
       pro:"",
       num:'',
-      test:'',
     }
   },
   methods:{
 
     btnAction(){
 
-        console.log(11111,this.pro,this.num)
-        console.log(8888,this.test)
+        console.log(11111,this.num,this.pro)
     },
     changeToP:function (data) {
 
-        console.log(6666,data)
-      this.pro = data[1];
+        this.pro = data[1];
         this.num = data[0];
-        console.log(7777777,this.pro,this.num)
-
     }
   },
 }
