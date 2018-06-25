@@ -5,12 +5,16 @@
     <myInput   @changeToP="changeToP"></myInput>
     <!--<Loading></Loading>-->
 
+    <child :message='pro'></child>
 
-    <div @click="btnAction">错误</div>
+    <div @click="btnAction">提示</div>
   </div>
 </template>
 
 <script>
+
+  import child from './components/Children.vue'
+
 export default {
   name: 'app',
   data () {
@@ -32,6 +36,10 @@ export default {
         this.num = data[0];
     }
   },
+
+  components:{
+      child
+  }
 }
 </script>
 
